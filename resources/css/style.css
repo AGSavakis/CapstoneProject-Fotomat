@@ -4,6 +4,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  background-color: #f3f3f3; */
 }
 
 /* Header */
@@ -92,15 +93,19 @@ header .mobile {
 }
 
 .image-container img {
-  display: block;
+      display: block;
+      width: 100%;
 }
 
 
 /* Sign Up Section */
 
-.center {
-  text-align: center;
-}
+/*.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}*/
 
 .button {
   border-radius: 4px;
@@ -130,19 +135,34 @@ header .mobile {
 
 #sign-up-cta {
   margin: 170px 0 170px 100px;
-  padding: 0 5rem 2.5rem 5rem;
+  /* padding: 0 5rem 2.5rem 5rem; */
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
 }
 
 #sign-up-cta .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 25.625rem;
-  margin-top: 2rem;
+  margin: 32px 80px 56px 80px;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
+}
+
+#sign-up-cta .header {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#sign-up-cta .email {
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 #sign-up-cta h1 {
@@ -186,26 +206,37 @@ header .mobile {
 /* Features Section */
 
 #features-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 4rem 5%;
-  background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 32px 64px 46px 64px;
 }
 
 .feature {
   flex: 1;
-  padding: 2rem;
+  padding: 32px;
   margin: 0px 1.25rem;
   background-color: white;
+  width: 100%;
+}
+
+.feature .center {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .feature .image-container {
-  width: 90%;
-  height: 65%;
+  width: 100%;
+  /* height: 65%; */
   margin: 0 auto;
 }
 
+
 .feature h2 {
+  padding: 40px 0;
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
@@ -217,34 +248,42 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+  padding-bottom: 20px;
 }
 
 /* Filters Section */
 
 #filters-section {
-  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #4a4a4a;
 }
 
 #filters-section .content {
-  padding: 0 .625rem;
-  margin-bottom: 5rem;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 64px 0 80px 0;
 }
 
 #filters-section .content h2 {
-  font-size: 2.25rem;
-  font-weight: bold;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 2rem;
   color: white;
 }
 
 #filters-section .content h3 {
+  font-family: "Roboto-Light", sans-serif;
   font-size: 1rem;
   line-height: 1.4;
-  font-weight: 300;
   color: white;
 }
 
 #filters-section .images-container {
+  display: flex;
+  justify-content: flex-start;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -252,18 +291,26 @@ header .mobile {
 /* Quotes Section */
 
 #quotes-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 20px;
+  position: relative;
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
-  padding: 5rem 0;
+#quotes-section .center {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
-  line-height: 1.1;
+  /*line-height: 1.1;*/
   font-style: italic;
   color: #4a4a4a;
 }
@@ -275,6 +322,7 @@ header .mobile {
 /* Footer */
 
 footer {
+      position: relative;
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
 }
@@ -353,8 +401,12 @@ footer .copyright {
   }
 
   #sign-up-cta .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 0;
   }
+
 
   #sign-up-cta .email {
     display: none;
@@ -403,6 +455,9 @@ footer .copyright {
 
   #filters-section .content {
     margin-bottom: 1rem;
+    text-align: center;
+    padding: 0 .625rem;
+    margin-bottom: 5rem;
   }
 
   #filters-section .content h2 {
