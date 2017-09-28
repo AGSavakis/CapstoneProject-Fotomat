@@ -6,8 +6,15 @@ body {
   font-size: 16px;
 }
 
+/* Header */
+
 header {
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
   height: 85px;
+  position: fixed;
+  z-index: 1;
 }
 
 header .content {
@@ -17,7 +24,7 @@ header .content {
       padding: 30px;
 }
 
-.navigation {
+header .content .navigation {
   display: flex;
       justify-content: space-between;
       align-content: center;
@@ -25,7 +32,7 @@ header .content {
       width: 97%;
 }
 
-.content .navigation .logo {
+header .content .navigation .logo {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -35,49 +42,18 @@ header .content {
     font-size: 25px;
 }
 
-header .desktop {
+header .content .navigation .desktop {
   font-family: Roboto, sans-serif;
   font-weight: 300;
   color: #4A4A4A;
 }
 
-header .icon {
+header .content .icon {
     width: 1.5rem;
   }
 
-header .icon img {
+header .content .icon img {
   width: 1.5rem;
-}
-
-.center {
-  text-align: center;
-}
-
-.button {
-  border-radius: 4px;
-  background-color: #4a4a4a;
-  color: white;
-}
-
-.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-}
-
-/* Header */
-
-header {
-  position: fixed;
-  width: 100%;
-  border-bottom: solid 1px #c6c1c1;
-  background-color: white;
-}
-
-header .logo {
-  flex: 1;
 }
 
 header nav ul {
@@ -99,16 +75,61 @@ header .mobile {
   display: none;
 }
 
+/* Main Content */
+.main-content {
+  position: relative;
+  top: 5.3125rem;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+
 /* Sign Up Section */
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
 
 #sign-up-section {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 43.5rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 43.5rem;
+      background-image: url(../images/banner-landingpage.jpg);
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+
 }
 
 #sign-up-cta {
+  margin: 170px 0 170px 100px;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
@@ -149,6 +170,18 @@ header .mobile {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
 }
+
+/*.banner {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}*/
 
 /* Features Section */
 
